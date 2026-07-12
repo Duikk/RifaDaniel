@@ -77,9 +77,9 @@ function cargarBoletas() {
 
         document.getElementById("disponibles").textContent = disponibles;
 
-document.getElementById("reservadas").textContent = reservadas;
+        document.getElementById("reservadas").textContent = reservadas;
 
-document.getElementById("vendidas").textContent = vendidas;
+        document.getElementById("vendidas").textContent = vendidas;
 
     })
 
