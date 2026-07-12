@@ -1,65 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rifa para la recuperación de Daniel</title>
+
+    <title>Rifa para la Recuperación de Daniel</title>
+
     <link rel="icon" type="image/png" href="favicon.png.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="contenedor">
 
-    <h1>🏆 RIFA PARA LA RECUPERACIÓN DE DANIEL DUICA</h1>
+    <header class="encabezado">
 
-    <h3>Meta: $40.000.000</h3>
+        <h1>🏆 RIFA PARA LA RECUPERACIÓN DE DANIEL</h1>
 
-    <h3>Premio: $5.000.000</h3>
+        <p class="subtitulo">
+            Ayúdanos participando en esta rifa solidaria.
+        </p>
 
-    <h3>Valor de la boleta: $80.000</h3>
+    </header>
 
-    <h3>La boleta escogida tiene 2 números sacados al azar entre el 000 y el 999 que se le hará saber luego de comprarla</h3>
+    <section class="info-rifa">
 
-    <h3>Se juega con los últimos 3 dígitos del número ganador de la lotería Sinuano Noche del 30 de agosto</h3>
+        <div class="dato">
 
-    <h3>EJEMPLO: Si el número ganador de la lotería fue el 1853, solo se toman los últimos 3 dígitos (853). La persona que en su boleta tenga entre sus 2 números, el número 853; será la ganadora de los $5.000.000</h3>
+            <span class="titulo">🏆 Premio</span>
 
-    <div class="estadisticas">
-        <span id="disponibles"></span>
-        <span id="reservadas"></span>
-        <span id="vendidas"></span>
+            <span class="valor">$5.000.000</span>
+
+        </div>
+
+        <div class="dato">
+
+            <span class="titulo">🎟 Valor de la boleta</span>
+
+            <span class="valor">$80.000</span>
+
+        </div>
+
+        <div class="dato">
+
+            <span class="titulo">🎲 Sorteo</span>
+
+            <span class="descripcion">
+
+                Juega con los últimos <b>3 dígitos</b> del número ganador de la
+                <b>Lotería Sinuano Noche</b> del <b>30 de agosto</b>.
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <section class="estadisticas">
+
+        <div class="estadistica">
+
+            <div class="numero" id="disponibles"></div>
+
+        </div>
+
+        <div class="estadistica">
+
+            <div class="numero" id="reservadas"></div>
+
+        </div>
+
+        <div class="estadistica">
+
+            <div class="numero" id="vendidas"></div>
+
+        </div>
+
+    </section>
+
+    <div class="acciones">
+
+        <button id="descargar">
+
+            📸 Descargar tablero
+
+        </button>
+
     </div>
 
     <div id="tablero"></div>
 
 </div>
+
+<!-- MODAL -->
+
 <div id="modal" class="modal">
 
     <div class="modal-contenido">
 
         <h2 id="tituloBoleta"></h2>
 
-        <p>¿Deseas comprar esta boleta?</p>
+        <p>
+
+            ¿Deseas comprar esta boleta?
+
+        </p>
 
         <button id="comprarBtn">
-            Comprar
+
+            Comprar por WhatsApp
+
         </button>
 
         <button id="cancelarBtn">
+
             Cancelar
+
         </button>
 
     </div>
 
 </div>
+
 <script src="app.js"></script>
 
 </body>
+
 </html>

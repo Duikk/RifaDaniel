@@ -1,4 +1,7 @@
-/* ===== ESTILOS GENERALES ===== */
+/* =====================================================
+   RIFA PARA LA RECUPERACIÓN DE DANIEL
+   Versión 1.0
+===================================================== */
 
 *{
     margin:0;
@@ -7,45 +10,244 @@
 }
 
 body{
-    font-family:'Poppins', sans-serif;
-    background:#f5f7fa;
-    color:#333;
+
+    font-family:'Poppins',sans-serif;
+    background:#f4f6f9;
+    color:#222;
     padding:20px;
+
 }
 
 .contenedor{
-    max-width:1200px;
+
+    max-width:1300px;
     margin:auto;
+
 }
 
-/* ===== ENCABEZADO ===== */
+/* =====================================================
+   ENCABEZADO
+===================================================== */
 
-h1{
+.encabezado{
+
     text-align:center;
+    margin-bottom:35px;
+
+}
+
+.encabezado h1{
+
+    font-size:2.3rem;
     color:#0f172a;
     margin-bottom:10px;
+
 }
 
-h3{
-    text-align:center;
-    color:#444;
-    margin:8px 0;
-    font-weight:500;
+.subtitulo{
+
+    color:#666;
+    font-size:1.05rem;
+
 }
 
-/* ===== CONTADORES ===== */
+/* =====================================================
+   TARJETAS SUPERIORES
+===================================================== */
 
-.estadisticas{
+.info-rifa{
+
     display:flex;
     justify-content:center;
-    gap:30px;
+    gap:20px;
     flex-wrap:wrap;
-    margin-bottom:30px;
-    font-size:18px;
-    font-weight:bold;
+    margin-bottom:35px;
+
 }
 
-/* ===== TABLERO ===== */
+.dato{
+
+    width:320px;
+    min-height:170px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.dato:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.titulo{
+
+    display:block;
+
+    color:#666;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.valor{
+
+    display:block;
+
+    color:#16a34a;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+.descripcion{
+
+    display:block;
+
+    font-size:17px;
+
+    color:#444;
+
+    line-height:1.6;
+
+}
+
+/* =====================================================
+   ESTADÍSTICAS
+===================================================== */
+
+.estadisticas{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+.estadistica{
+
+    min-width:180px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+}
+
+.disponible-card{
+
+    background:#16a34a;
+
+}
+
+.reservada-card{
+
+    background:#eab308;
+
+    color:#222;
+
+}
+
+.vendida-card{
+
+    background:#dc2626;
+
+}
+/* =====================================================
+   BOTÓN DESCARGAR
+===================================================== */
+
+.acciones{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+#descargar{
+
+    background:#16a34a;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.2s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+#descargar:hover{
+
+    background:#15803d;
+
+    transform:translateY(-2px);
+
+}
+
+/* =====================================================
+   ZONA QUE SE EXPORTARÁ COMO IMAGEN
+===================================================== */
+
+#captura{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/* =====================================================
+   TABLERO
+===================================================== */
 
 #tablero{
 
@@ -57,27 +259,29 @@ h3{
 
 }
 
-/* ===== BOLETAS ===== */
+/* =====================================================
+   BOLETAS
+===================================================== */
 
 .boleta{
 
-    height:65px;
+    height:68px;
 
-    border-radius:12px;
+    border-radius:14px;
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
+
+    align-items:center;
 
     font-size:20px;
 
     font-weight:bold;
 
-    transition:.25s;
-
     cursor:pointer;
+
+    transition:.2s;
 
     user-select:none;
 
@@ -87,11 +291,9 @@ h3{
 
 .boleta:hover{
 
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 
 }
-
-/* ===== COLORES ===== */
 
 .disponible{
 
@@ -116,120 +318,210 @@ h3{
     color:white;
 
 }
-
-/* ===== CELULAR ===== */
-
-@media(max-width:900px){
-
-#tablero{
-
-grid-template-columns:repeat(5,1fr);
-
-}
-
-}
-
-@media(max-width:600px){
-
-#tablero{
-
-grid-template-columns:repeat(4,1fr);
-
-}
-
-.boleta{
-
-height:55px;
-
-font-size:17px;
-
-}
-
-}
-/* ===== MODAL ===== */
+/* =====================================================
+   MODAL
+===================================================== */
 
 .modal{
 
-display:none;
+    display:none;
 
-position:fixed;
+    position:fixed;
 
-top:0;
+    top:0;
 
-left:0;
+    left:0;
 
-width:100%;
+    width:100%;
 
-height:100%;
+    height:100%;
 
-background:rgba(0,0,0,.45);
+    background:rgba(0,0,0,.45);
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
-z-index:999;
+    z-index:999;
 
 }
 
 .modal-contenido{
 
-background:white;
+    width:340px;
 
-padding:30px;
+    background:white;
 
-border-radius:15px;
+    border-radius:18px;
 
-text-align:center;
+    padding:30px;
 
-width:320px;
+    text-align:center;
 
-box-shadow:0 10px 30px rgba(0,0,0,.25);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
 
 }
 
 .modal h2{
 
-margin-bottom:15px;
+    margin-bottom:15px;
+
+    color:#0f172a;
 
 }
 
 .modal p{
 
-margin-bottom:25px;
+    margin-bottom:25px;
+
+    color:#555;
+
+    line-height:1.5;
 
 }
 
 .modal button{
 
-width:100%;
+    width:100%;
 
-padding:12px;
+    border:none;
 
-margin-top:10px;
+    padding:13px;
 
-border:none;
+    border-radius:10px;
 
-border-radius:8px;
+    margin-top:12px;
 
-font-size:16px;
+    font-size:16px;
 
-cursor:pointer;
+    font-family:'Poppins',sans-serif;
+
+    cursor:pointer;
+
+    transition:.2s;
 
 }
 
 #comprarBtn{
 
-background:#22c55e;
+    background:#16a34a;
 
-color:white;
+    color:white;
+
+}
+
+#comprarBtn:hover{
+
+    background:#15803d;
 
 }
 
 #cancelarBtn{
 
-background:#ef4444;
+    background:#dc2626;
 
-color:white;
+    color:white;
+
+}
+
+#cancelarBtn:hover{
+
+    background:#b91c1c;
+
+}
+
+/* =====================================================
+   PIE DE LA IMAGEN DESCARGADA
+===================================================== */
+
+.fecha-captura{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1000px){
+
+    #tablero{
+
+        grid-template-columns:repeat(5,1fr);
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .encabezado h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .dato{
+
+        width:100%;
+
+    }
+
+    .estadistica{
+
+        width:100%;
+
+    }
+
+    #tablero{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+    .boleta{
+
+        height:58px;
+
+        font-size:17px;
+
+    }
+
+    .modal-contenido{
+
+        width:92%;
+
+    }
+
+}
+
+@media(max-width:450px){
+
+    body{
+
+        padding:12px;
+
+    }
+
+    #tablero{
+
+        gap:8px;
+
+    }
+
+    .boleta{
+
+        height:52px;
+
+        font-size:15px;
+
+    }
 
 }
