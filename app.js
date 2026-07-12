@@ -103,6 +103,48 @@ document.getElementById("cancelarBtn").onclick = () => {
 
 document.getElementById("descargar").onclick = () => {
 
-    alert("El botón funciona");
+    const boton = document.getElementById("descargar");
+
+    // Oculta el botón para que no salga en la imagen
+    boton.style.display = "none";
+
+    // Crear fecha y hora
+    const ahora = new Date();
+
+    const fecha = document.createElement("div");
+
+    fecha.id = "fechaCaptura";
+
+    fecha.style.textAlign = "center";
+    fecha.style.marginTop = "20px";
+    fecha.style.fontSize = "18px";
+    fecha.style.fontWeight = "600";
+
+    fecha.innerHTML =
+        "📅 Actualizado: " +
+        ahora.toLocaleDateString("es-CO") +
+        " - " +
+        ahora.toLocaleTimeString("es-CO");
+
+    document.querySelector(".contenedor").appendChild(fecha);
+
+    html2canvas(document.querySelector(".contenedor"), {
+        scale: 2
+    }).then(canvas => {
+
+        const enlace = document.createElement("a");
+
+        enlace.download = "Tablero_Rifa_Daniel.png";
+
+        enlace.href = canvas.toDataURL("image/png");
+
+        enlace.click();
+
+        // Restaurar la página
+        fecha.remove();
+
+        boton.style.display = "inline-block";
+
+    });
 
 };
