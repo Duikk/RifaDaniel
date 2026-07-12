@@ -504,9 +504,9 @@ body{
 
     .boleta{
 
-        height:58px;
+        height:75px;
 
-        font-size:17px;
+        font-size:13px;
 
     }
 
@@ -557,7 +557,7 @@ body{
 
 .numero-boleta{
 
-    font-size:18px;
+    font-size:14px;
 
     font-weight:700;
 
@@ -568,7 +568,7 @@ body{
 
     margin-top:5px;
 
-    font-size:14px;
+    font-size:10px;
 
     font-weight:600;
 
