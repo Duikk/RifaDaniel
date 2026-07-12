@@ -22,10 +22,20 @@ function cargarBoletas() {
 
             if (b.estado === "Disponible") {
 
-                div.classList.add("disponible");
-                div.textContent = b.boleta;
+    div.classList.add("disponible");
 
-                div.onclick = () => {
+    div.innerHTML = `
+        <div class="numero-boleta">
+            🎟 ${b.boleta}
+        </div>
+
+        <div class="numeros-rifa">
+            ${String(b.numero1).padStart(3,'0')} -
+            ${String(b.numero2).padStart(3,'0')}
+        </div>
+    `;
+
+    div.onclick = () => {
 
                     document.getElementById("tituloBoleta").textContent =
                     "🎟 Boleta " + b.boleta;
@@ -55,21 +65,39 @@ function cargarBoletas() {
 
             else if (b.estado === "Reservada") {
 
-                div.classList.add("reservada");
-                div.textContent = "APARTADA";
+    div.classList.add("reservada");
 
-                reservadas++;
+    div.innerHTML = `
+        <div>
+            APARTADA
+        </div>
 
-            }
+        <small>
+            🎟 ${b.boleta}
+        </small>
+    `;
+
+    reservadas++;
+
+}
 
             else {
 
-                div.classList.add("vendida");
-                div.textContent = "VENDIDA";
+    div.classList.add("vendida");
 
-                vendidas++;
+    div.innerHTML = `
+        <div>
+            VENDIDA
+        </div>
 
-            }
+        <small>
+            🎟 ${b.boleta}
+        </small>
+    `;
+
+    vendidas++;
+
+}
 
             tablero.appendChild(div);
 
