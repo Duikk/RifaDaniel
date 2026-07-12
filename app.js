@@ -128,8 +128,10 @@ document.getElementById("descargar").onclick = () => {
 
     document.querySelector(".contenedor").appendChild(fecha);
 
-    html2canvas(document.querySelector(".contenedor"), {
-        scale: 2
+    html2canvas(document.body, {
+    scale: 2,
+    windowWidth: document.body.scrollWidth,
+    windowHeight: document.body.scrollHeight
     }).then(canvas => {
 
         const enlace = document.createElement("a");
@@ -142,6 +144,8 @@ document.getElementById("descargar").onclick = () => {
 
         // Restaurar la página
         fecha.remove();
+
+        window.scrollTo(0, 0);
 
         boton.style.display = "inline-block";
 
