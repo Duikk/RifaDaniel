@@ -103,40 +103,6 @@ document.getElementById("cancelarBtn").onclick = () => {
 
 document.getElementById("descargar").onclick = () => {
 
-    const captura = document.getElementById("captura");
-
-    const fecha = new Date();
-
-    const pie = document.createElement("div");
-
-    pie.className = "fecha-captura";
-
-    pie.innerHTML =
-    "<br><b>Generado:</b> " +
-    fecha.toLocaleDateString("es-CO") +
-    " - " +
-    fecha.toLocaleTimeString("es-CO");
-
-    captura.appendChild(pie);
-
-    html2canvas(captura,{
-
-        backgroundColor:"#ffffff",
-
-        scale:2
-
-    }).then(canvas=>{
-
-        const enlace=document.createElement("a");
-
-        enlace.download="Tablero_Rifa_Daniel.png";
-
-        enlace.href=canvas.toDataURL("image/png");
-
-        enlace.click();
-
-        pie.remove();
-
-    });
+    alert("El botón funciona");
 
 };
