@@ -1,0 +1,234 @@
+/* ===== ESTILOS GENERALES ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    padding:20px;
+}
+
+.contenedor{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===== ENCABEZADO ===== */
+
+h1{
+    text-align:center;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+h3{
+    text-align:center;
+    color:#555;
+    margin-bottom:25px;
+}
+
+/* ===== CONTADORES ===== */
+
+.estadisticas{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* ===== TABLERO ===== */
+
+#tablero{
+
+    display:grid;
+
+    grid-template-columns:repeat(10,1fr);
+
+    gap:12px;
+
+}
+
+/* ===== BOLETAS ===== */
+
+.boleta{
+
+    height:65px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.12);
+
+}
+
+.boleta:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ===== COLORES ===== */
+
+.disponible{
+
+    background:#22c55e;
+
+    color:white;
+
+}
+
+.reservada{
+
+    background:#facc15;
+
+    color:#333;
+
+}
+
+.vendida{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+/* ===== CELULAR ===== */
+
+@media(max-width:900px){
+
+#tablero{
+
+grid-template-columns:repeat(5,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+#tablero{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.boleta{
+
+height:55px;
+
+font-size:17px;
+
+}
+
+}
+/* ===== MODAL ===== */
+
+.modal{
+
+display:none;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999;
+
+}
+
+.modal-contenido{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+text-align:center;
+
+width:320px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.modal h2{
+
+margin-bottom:15px;
+
+}
+
+.modal p{
+
+margin-bottom:25px;
+
+}
+
+.modal button{
+
+width:100%;
+
+padding:12px;
+
+margin-top:10px;
+
+border:none;
+
+border-radius:8px;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+#comprarBtn{
+
+background:#22c55e;
+
+color:white;
+
+}
+
+#cancelarBtn{
+
+background:#ef4444;
+
+color:white;
+
+}
