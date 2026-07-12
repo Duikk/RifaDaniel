@@ -75,14 +75,11 @@ function cargarBoletas() {
 
         });
 
-        document.getElementById("disponibles").textContent =
-        "🟢 Disponibles: " + disponibles;
+        document.getElementById("disponibles").textContent = disponibles;
 
-        document.getElementById("reservadas").textContent =
-        "🟡 Apartadas: " + reservadas;
+document.getElementById("reservadas").textContent = reservadas;
 
-        document.getElementById("vendidas").textContent =
-        "🔴 Vendidas: " + vendidas;
+document.getElementById("vendidas").textContent = vendidas;
 
     })
 
