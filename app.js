@@ -45,9 +45,14 @@ function cargarBoletas() {
                     document.getElementById("comprarBtn").onclick = () => {
 
                         const mensaje =
-                        "Hola, quiero comprar la boleta " +
-                        b.boleta +
-                        " de la Rifa para la recuperación de Daniel.";
+"Hola, quiero comprar la boleta " +
+b.boleta +
+" de la Rifa para la recuperación de Daniel.\n\n" +
+"Mis números asignados son: " +
+String(b.numero1).padStart(3,'0') +
+" y " +
+String(b.numero2).padStart(3,'0') +
+".";
 
                         window.open(
                             "https://wa.me/573007028035?text=" +
