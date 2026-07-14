@@ -130,7 +130,31 @@ body{
 
 }
 
+.valor2{
+
+    display:block;
+
+    color:#16a34a;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
 .descripcion{
+
+    display:block;
+
+    font-size:17px;
+
+    color:#444;
+
+    line-height:1.6;
+
+}
+
+.descripcion2{
 
     display:block;
 
